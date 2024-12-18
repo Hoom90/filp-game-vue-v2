@@ -116,10 +116,10 @@ const startTimer = () => {
       <v-overlay v-model="message" class="d-flex justify-center align-center" :persistent="true">
         <v-card width="300" class="text-center">
           <v-card-text>
-            <p class="mb-5" style="font-size: 20px;">
+            <p class="mb-5">
               <strong>{{ message }}</strong>
             </p>
-            <v-btn color="success" @click="startOver">شروع دوباره</v-btn>
+            <v-btn color="warning" @click="startOver">دوباره</v-btn>
           </v-card-text>
         </v-card>
       </v-overlay>
@@ -128,6 +128,13 @@ const startTimer = () => {
 </template>
 
 <style>
+@font-face{
+  font-family: "vazir";
+  src : url('@/assets/font/Vazirmatn-Regular.ttf');
+}
+*{
+  font-family: vazir;
+}
 .card-primary-color {
   background-color: #DA498D;
   color: #fff;
