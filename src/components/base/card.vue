@@ -11,7 +11,7 @@ const props = defineProps({
   isFliped:{
     type: Boolean,
     required: true,
-  }
+  },
 });
 const emits = defineEmits(['click'])
 </script>
@@ -19,10 +19,10 @@ const emits = defineEmits(['click'])
 <template>
   <transition name="flip">
     <!-- <v-card elevation="2" class="rounded-lg d-flex align-center justify-center" :key="isFliped" -->
-    <v-card elevation="2" class="rounded-lg d-flex align-center justify-center"
+    <v-card elevation="2" class="rounded-lg d-flex align-center justify-center" :class="isFliped ? '':'card-primary-color'"
       @click="emits('click', !isFliped)" width="80" height="80">
       <template v-if="isFliped">
-        <v-img :src="img" aspect-ratio="1" class="rounded-lg w-100"></v-img>
+        <v-img :src="img"/>
       </template>
       <template v-else>
         <p>{{ index }}</p>
