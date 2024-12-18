@@ -3,7 +3,7 @@ import { ref } from "vue"
 import baseCard from "@/components/base/card.vue"
 const assetsLength = 8
 const totalMatch = assetsLength
-const defaultCounter = 1
+const defaultCounter = 40
 const defaultTime = 120
 const matchCounter = ref(0)
 const counter = ref(defaultCounter)
